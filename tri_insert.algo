@@ -1,0 +1,17 @@
+FUNCTION tri_insertion(tab: ARRay_of INTEGER) : INTEGER
+VAR
+i,j,elt : INTEGER;
+BEGIN
+j:=2;
+    WHILE (j <= length.tab) DO
+        i := j-1;
+        elt := tab[j];
+    WHILE (i > 0 AND tab[i] > elt) DO
+        tab[i+1] := tab[i]
+        i := i-1
+    END_WHILE
+        tab[i+1]:= elt;
+        j:= j+1;
+    END_WHILE
+    RETURN tab ;
+END
